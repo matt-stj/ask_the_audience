@@ -10,6 +10,10 @@ for (var i = 0; i < buttons.length; i++) {
   });
 }
 
+socket.on('voteCount', function (votes) {
+  console.log(votes);
+});
+
 socket.on('usersConnected', function (count) {
   connectionCount.innerText = 'Connected Users: ' + count;
 });
