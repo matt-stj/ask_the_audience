@@ -31,7 +31,6 @@ io.on('connection', function (socket) {
       votes[socket.id] = message;
       socket.emit('voteCount', countVotes(votes));
       socket.emit('userVote', message)
-      console.log(socket.id, message)
     }
   });
 
