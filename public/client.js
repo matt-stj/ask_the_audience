@@ -15,9 +15,10 @@ for (var i = 0; i < buttons.length; i++) {
 socket.on('voteCount', function (votes) {
   results = ""
   for (var vote in votes) {
-    results = results + vote + ": " + votes[vote] + "  "
+    results = results + "<p>" + vote + ": " + votes[vote] + "</p>"
   }
-  voteCount.innerText = results
+  voteCount.innerHTML = results
+  console.log(results)
 });
 
 socket.on('userVote', function (message) {

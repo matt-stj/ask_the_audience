@@ -2,21 +2,36 @@
 <html>
   <head>
     <title>Ask the Audience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div id="status-message"></div>
-    <div id="connection-count"></div>
+    <nav>
+   <div class="nav-wrapper">
+     <a href="/" class="brand-logo">Ask the Audience</a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <div id="status-message"><li></li></div>
+     </ul>
+   </div>
+ </nav>
 
+ <div class="center">
+ <h1>Ask the Audience</h1><br>
+
+
+ <h3>Select an option</h3>
     <div id="choices">
-      <button>A</button>
-      <button>B</button>
-      <button>C</button>
-      <button>D</button>
+      <button class="btn blue">A</button>
+      <button class="btn green">B</button>
+      <button class="btn orange">C</button>
+      <button class="btn red">D</button>
     </div>
 
     <div id="vote-count"></div>
     <div id="user-vote"></div>
+    <div id="connection-count"></div>
 
+  </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
   </body>
